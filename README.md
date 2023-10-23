@@ -13,3 +13,15 @@ Total Amount, Total Cost, Total Profit, Profit % by per month from which busines
 3)See and manage relationsheep between tables
 4)Create new measure by DAX function eg. Total Amount, Total Cost, Total Profit,Profit %
 5)Create Dashboard
+
+# Dax Function:
+Total Amount=  SUM(sales[Amount])
+Total Cost =   SUM(sales[Cost])
+Total Profit = sales[Total Amount]-sales[Total Cost]
+Profit % = DIVIDE([Total Profit],[Total Amount])
+Profit target met = IF([Profit %]>0.5,"👍","👎")
+
+# M function:
+Cost = sales[Boxes]*RELATED(products[Cost per box])
+
+![image](https://github.com/Arjunwadkarakshata/Awesome-Chocolate-dashboard/assets/138595946/5f2f1655-58d3-44c4-b006-210c119a97ac)
